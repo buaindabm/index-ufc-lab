@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于 index-ufc.com · 简洁博客式介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', '宋体', 'Times New Roman', serif;
+      line-height: 1.7;
+      color: #2c2c2c;
+      background-color: #f7f4ef;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ——— 深色头图 ——— */
+    .hero {
+      background: #1a1a2e;
+      color: #e2dfd5;
+      padding: 5rem 1.5rem 3.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: #d4a373;
+      margin: 2rem auto 0;
+    }
+
+    .hero h1 {
+      font-size: 2.3rem;
+      font-weight: 450;
+      letter-spacing: 2px;
+      margin-bottom: 0.8rem;
+      color: #f0ebe0;
+    }
+
+    .hero .sub {
+      font-size: 1rem;
+      opacity: 0.75;
+      font-style: italic;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ——— 浅色正文区 ——— */
+    .content {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 3.2rem 1.5rem 4rem;
+      background: #fffcf8;
+      box-shadow: 0 1px 20px rgba(0,0,0,0.03);
+    }
+
+    .content p {
+      margin-bottom: 1.6rem;
+      font-size: 1.02rem;
+      text-align: justify;
+      word-break: break-word;
+    }
+
+    .content strong {
+      color: #1f1f2a;
+      font-weight: 550;
+    }
+
+    .content a {
+      color: #b0653b;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .content a:hover {
+      border-bottom-color: #b0653b;
+      color: #7f4728;
+    }
+
+    /* ——— 引用提示块 ——— */
+    .blockquote-note {
+      margin: 2.2rem 0;
+      padding: 1.5rem 2rem;
+      border-left: 4px solid #d4a373;
+      background: #f4efe8;
+      border-radius: 0 8px 8px 0;
+      font-style: normal;
+    }
+
+    .blockquote-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    .blockquote-note .label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #7f674e;
+      margin-bottom: 0.4rem;
+    }
+
+    /* ——— 分隔装饰 ——— */
+    .divider {
+      width: 50px;
+      height: 1px;
+      background: #ccc5bb;
+      margin: 2rem auto 2.2rem;
+    }
+
+    /* ——— 场景卡片（极简） ——— */
+    .scene-list {
+      margin: 2rem 0 1.6rem;
+    }
+
+    .scene-item {
+      background: #faf7f2;
+      padding: 1.2rem 1.6rem;
+      margin-bottom: 0.8rem;
+      border-radius: 6px;
+      border: 1px solid #e6dfd6;
+      transition: background 0.15s;
+    }
+
+    .scene-item:hover {
+      background: #f2ece4;
+    }
+
+    .scene-item span {
+      display: inline-block;
+      font-weight: 550;
+      color: #4c3b2a;
+      margin-right: 0.3rem;
+    }
+
+    /* ——— FAQ 摘要（精简） ——— */
+    .faq-mini {
+      background: #f7f1ea;
+      padding: 1.4rem 1.8rem;
+      margin: 2.2rem 0 1.8rem;
+      border-radius: 10px;
+    }
+
+    .faq-mini h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #3b2d1f;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.5px;
+    }
+
+    .faq-mini p {
+      font-size: 0.96rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .faq-mini p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ——— 底部访问句 ——— */
+    .visit-line {
+      margin-top: 2.8rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #e2d9ce;
+      font-size: 0.98rem;
+      color: #4d443a;
+    }
+
+    /* ——— 响应式 ——— */
+    @media (max-width: 540px) {
+      .hero {
+        padding: 3.2rem 1rem 2.4rem;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .content {
+        padding: 2rem 1rem 3rem;
+      }
+      .blockquote-note {
+        padding: 1.2rem 1.2rem;
+      }
+      .scene-item {
+        padding: 1rem 1.1rem;
+      }
+    }
+
+    @media (min-width: 820px) {
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      .content {
+        padding: 3.6rem 2.5rem 4.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图 -->
+  <section class="hero">
+    <h1>关于这个站点的叙述</h1>
+    <p class="sub">一面简素，几段线索，不喧哗，只把来路落笔写清。</p>
+  </section>
+
+  <!-- 正文区 -->
+  <div class="content">
+
+    <p>
+      这个网站——<strong>index-ufc.com</strong>——最早只是个人书签栏里的一枚索引。后来慢慢觉得，有些资源、笔记、或者偶然发现的工具，值得被更安静地放置在一个地方。不追求流量，也不追赶热点，它更像一个数字化的桌面，偶尔擦拭，偶尔添置。
+    </p>
+
+    <p>
+      站名里的“ufc”没有特别宏大的指向，更多是一种符号上的顺手。如果你在别处见过类似的名字，那大概是巧合。对我来说，它只是若干字母的组合，念起来干脆，写下来也不容易混淆。这也是为什么你会看到很多页面里都带着这个简短的标识——它像一个小小的锚点，让内容有了归属。
+    </p>
+
+    <!-- 引用提示块 -->
+    <div class="blockquote-note">
+      <div class="label">· 提示 ·</div>
+      <p>
+        这里没有算法推荐，也不收集你的浏览习惯。每一条链接、每一段文字，都经过人工筛选或书写。你读到的一切，都来自一个普通人的判断与审美——有局限，但诚恳。
+      </p>
+    </div>
+
+    <p>
+      最初搭建的想法很简单：<strong>可信比丰富重要</strong>。网上信息太多，筛选成本却越来越高。与其在无数个标签页里迷失，不如给自己留一个克制的起点。所以这个网站的主题始终是整理而非堆砌，是导航而非仓库。隔一段时间回头翻看，还能回想起当初为什么把某个页面放了进来——这种记忆的线索，我觉得挺珍贵。
+    </p>
+
+    <!-- 场景卡片 -->
+    <div class="scene-list">
+      <div class="scene-item">
+        <span>◈</span> 当你需要快速找到一个曾用过的工具页，又不想重翻浏览器历史。
+      </div>
+      <div class="scene-item">
+        <span>◈</span> 当你想了解某个话题，却希望先看一段有态度、非机器生成的简评。
+      </div>
+      <div class="scene-item">
+        <span>◈</span> 当你只是单纯想找一个安静的地方读几行字，不被弹窗和自动播放打扰。
+      </div>
+    </div>
+
+    <p>
+      当然，再克制的站点也需要边界。我会尽量避免放置外部链接的镜像或转存，所有推荐都指向原始出处。同时，定期检查链接的有效性——如果某一天你点开某个地址发现已失效，可以给我反馈，我会尽快更新或移除。
+    </p>
+
+    <!-- 分隔 -->
+    <div class="divider"></div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-mini">
+      <h3>几个常见疑问</h3>
+      <p><strong>Q：</strong> 网站内容会频繁更新吗？<br>
+      <strong>A：</strong> 不追求固定频率。有值得补充或修正的内容时才会更新，有时隔几周，有时隔几个月。</p>
+      <p><strong>Q：</strong> 为什么看不到评论区或社交分享按钮？<br>
+      <strong>A：</strong> 有意保留的安静。如果你有话想说，页面底部有一个联系入口（非公开形式），留言我会看到。</p>
+      <p><strong>Q：</strong> “ufc”三个字母会不会让人联想到其他含义？<br>
+      <strong>A：</strong> 我知道有些领域也使用相同的缩写，但在这个站点里它没有格斗或竞技的含义，就只是一个简洁的标签。</p>
+    </div>
+
+    <p>
+      最后，如果你愿意把这里当作一个偶尔落脚的起点，不妨从最熟悉的<a href="https://index-ufc.com">ufc</a>页面开始。那是我最早写的一个索引，也是整个站点的根——简洁、直接，没有任何多余装饰。或许你也能从中找到一点属于自己的节奏。
+    </p>
+
+    <!-- 访问句 -->
+    <div class="visit-line">
+      感谢阅读。内容还在缓慢生长，但愿每一次打开，都不觉得辜负时间。
+    </div>
+
+  </div>
+
+</body>
+</html>
